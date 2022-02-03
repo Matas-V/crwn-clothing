@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { selectCartItems } from '../../redux/cart/cart.selectors';
 
 import CustomButton from '../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
 import './cart-dropdown.styles.scss';
 
 const CartDropdown = () => {
-  const cartItems = useSelector((state) => state.cart.cartItems);
+  const cartItems = useSelector((state) => selectCartItems(state));
 
   return (
     <div className='cart-dropdown'>
