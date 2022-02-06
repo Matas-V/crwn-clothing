@@ -11,8 +11,6 @@ const ColletionsOverview = () => {
     collections: selectCollectionsForPreview
   }))
 
-  console.log("asdf", collections)
-
   return (
     <div className='collections-overview'>
       {collections.map(({ id, ...otherColletionProps }) => (
